@@ -1,0 +1,178 @@
+.header {
+	padding: 20px 0 0;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.nav {
+		margin-left: auto;
+
+		&__list {
+			display: flex;
+			align-items: center;
+			column-gap: 46px;
+
+			li {
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+
+		&__link {
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 1.16;
+			color: var(--font-1);
+			transition: font-weight 0.2s ease-in-out;
+
+			@media (hover: hover) {
+				&:hover {
+					font-weight: 800;
+				}
+			}
+
+			@media (hover: none) {
+				&:active {
+					font-weight: 800;
+				}
+			}
+		}
+
+		&__tel {
+			font-weight: 800;
+			font-size: 18px;
+			line-height: 1.16;
+			color: var(--font-1);
+		}
+	}
+
+	&__tel {
+		margin-left: auto;
+		font-weight: 800;
+		font-size: 18px;
+		line-height: 1.16;
+		color: var(--font-1);
+	}
+
+	.hamburger {
+		display: none;
+		margin-left: 20px;
+		width: 30px;
+		height: 18px;
+		flex-direction: column;
+		align-items: end;
+		justify-content: center;
+		z-index: 4;
+
+		span {
+			width: 19px;
+			height: 1px;
+			background: var(--font-1);
+			position: relative;
+			transition: all 0.3s linear;
+			border-radius: 0.5px;
+
+			&::before {
+				content: '';
+				width: 19px;
+				height: 1px;
+				position: absolute;
+				left: 0;
+
+				border-radius: 0.5px;
+				background: var(--font-1);
+				transition: all 0.3s linear;
+				transform: translateY(-6px);
+			}
+			&::after {
+				content: '';
+				width: 19px;
+				height: 1px;
+				position: absolute;
+				left: 0;
+
+				border-radius: 0.5px;
+				background: var(--font-1);
+				transition: all 0.3s linear;
+				transform: translateY(6px);
+			}
+		}
+
+		&--active {
+			span {
+				width: 19px;
+				height: 1px;
+				position: relative;
+				background: transparent;
+				&::before {
+					transform: rotate(45deg);
+					background: var(--font-1);
+				}
+				&::after {
+					transform: rotate(-45deg);
+					background: var(--font-1);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.header {
+		padding: 0;
+
+		.nav {
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			padding: 50px 15px 20px;
+			background: var(--font-2);
+			z-index: 3;
+			transition: all 0.3s linear;
+			opacity: 0;
+			visibility: hidden;
+
+			&--active {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&__list {
+				li {
+					&:last-child {
+						margin-top: 30px;
+						display: block;
+					}
+				}
+
+				flex-direction: column;
+				row-gap: 20px;
+			}
+
+			&__link {
+				font-size: 18px;
+			}
+		}
+
+		&__tel {
+			display: none;
+		}
+
+		.hamburger {
+			display: flex;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.header {
+		&__logo {
+			max-width: 83px;
+		}
+	}
+}

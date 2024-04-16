@@ -1,0 +1,40 @@
+@import './fonts';
+@import './reset';
+
+:root {
+	--font-1: #151515;
+	--font-2: #ffffff;
+	--font-3: #505050;
+	--accent-green: #38c19d;
+	--accent-purple: #6416ca;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Gilroy', sans-serif;
+	background-color: #f7f7fd;
+	scroll-behavior: smooth;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1220px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+@import './blocks/header';
+@import './blocks/intro';
+@import './blocks/about';
+@import './blocks/get';
+@import './blocks/benefits';
+@import './blocks/features';
+@import './blocks/assess';
+@import './blocks/manual';
+@import './blocks/result';
+@import './blocks/footer';
