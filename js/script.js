@@ -2,6 +2,7 @@
 try {
 	const hamburger = document.querySelector('.hamburger');
 	const headerMenu = document.querySelector('.nav');
+	const navLinks = document.querySelectorAll('.nav-link');
 
 	hamburger.addEventListener('click', () => {
 		if (!headerMenu.classList.contains('nav--active')) {
@@ -13,5 +14,13 @@ try {
 			headerMenu.classList.remove('nav--active');
 			document.body.classList.remove('no-scroll');
 		}
+	});
+
+	navLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			hamburger.classList.remove('hamburger--active');
+			headerMenu.classList.remove('nav--active');
+			document.body.classList.remove('no-scroll');
+		});
 	});
 } catch (e) {}
