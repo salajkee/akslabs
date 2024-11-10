@@ -1,0 +1,161 @@
+.header {
+	padding: 20px 0 0;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+	}
+
+	.nav {
+		margin-left: auto;
+
+		&__list {
+			display: flex;
+			align-items: center;
+			column-gap: 46px;
+		}
+
+		&__link {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 1.2;
+			color: var(--font-1);
+			transition: 0.2s linear;
+
+			@media (hover: hover) {
+				&:hover {
+					color: var(--accent-green);
+				}
+			}
+		}
+
+		&__tel {
+			font-weight: 800;
+			font-size: 18px;
+			line-height: 1.16;
+			color: var(--font-1);
+		}
+	}
+
+	&__tel {
+		width: 18px;
+		height: 18px;
+		margin-left: auto;
+
+		svg {
+			fill: var(--accent-green);
+		}
+	}
+
+	.hamburger {
+		display: none;
+		margin-left: 20px;
+		width: 19px;
+		height: 18px;
+		flex-direction: column;
+		align-items: end;
+		justify-content: center;
+		z-index: 4;
+
+		span {
+			width: 19px;
+			height: 1px;
+			background: var(--font-1);
+			position: relative;
+			transition: all 0.3s linear;
+			border-radius: 0.5px;
+
+			&::before {
+				content: '';
+				width: 19px;
+				height: 1px;
+				position: absolute;
+				left: 0;
+
+				border-radius: 0.5px;
+				background: var(--font-1);
+				transition: all 0.3s linear;
+				transform: translateY(-6px);
+			}
+			&::after {
+				content: '';
+				width: 19px;
+				height: 1px;
+				position: absolute;
+				left: 0;
+
+				border-radius: 0.5px;
+				background: var(--font-1);
+				transition: all 0.3s linear;
+				transform: translateY(6px);
+			}
+		}
+
+		&--active {
+			span {
+				width: 19px;
+				height: 1px;
+				position: relative;
+				background: transparent;
+				&::before {
+					transform: rotate(45deg);
+					background: var(--font-1);
+				}
+				&::after {
+					transform: rotate(-45deg);
+					background: var(--font-1);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.header {
+		padding: 15px 0 0;
+
+		.nav {
+			width: 200px;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			padding: 15px;
+			background: var(--font-2);
+			z-index: 3;
+			transition: all 0.3s linear;
+			opacity: 0;
+			visibility: hidden;
+			border-radius: 10px;
+			border: 1px solid var(--accent-green);
+
+			&--active {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&__list {
+				flex-direction: column;
+				row-gap: 20px;
+				align-items: flex-start;
+			}
+
+			&__link {
+				font-size: 16px;
+			}
+		}
+
+		.hamburger {
+			display: flex;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.header {
+		&__logo {
+			max-width: 83px;
+		}
+	}
+}
