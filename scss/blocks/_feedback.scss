@@ -88,3 +88,25 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.feedback {
+		padding: 50px 0;
+	}
+}
+
+@media (max-width: 575px) {
+	.feedback {
+		&__form {
+			grid-template-columns: 1fr;
+
+			.item:nth-child(3) {
+				grid-column: 1 / 2;
+			}
+
+			&-btn {
+				grid-column: 1 / 2;
+			}
+		}
+	}
+}

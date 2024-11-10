@@ -1336,6 +1336,22 @@ body {
   background-color: var(--accent-green);
 }
 
+@media (max-width: 767px) {
+  .feedback {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 575px) {
+  .feedback__form {
+    grid-template-columns: 1fr;
+  }
+  .feedback__form .item:nth-child(3) {
+    grid-column: 1/2;
+  }
+  .feedback__form-btn {
+    grid-column: 1/2;
+  }
+}
 .footer {
   margin-top: 50px;
   padding: 32px 0;
