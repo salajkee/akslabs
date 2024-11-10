@@ -24,7 +24,7 @@
 			content: '';
 			width: 100px;
 			height: 100px;
-			background-color: var(--accent-purple);
+			background-color: var(--accent-green);
 			position: absolute;
 			top: 50%;
 			left: 50%;
@@ -38,31 +38,41 @@
 		flex-direction: column;
 		row-gap: 50px;
 		border-radius: 15px;
-
 		backdrop-filter: blur(10px);
-		background-color: var(--accent-purple);
 
-		&:nth-child(1) .vision__item-text,
-		&:nth-child(4) .vision__item-text {
-			color: var(--font-2);
+		&:nth-child(1),
+		&:nth-child(4) {
+			background-color: var(--accent-green);
+			.vision__item-icon svg {
+				fill: var(--white);
+			}
+
+			.vision__item-text {
+				color: var(--white);
+			}
 		}
 
 		&:nth-child(2),
 		&:nth-child(3) {
-			background-color: #fff;
+			background-color: var(--white);
+			.vision__item-icon svg {
+				fill: var(--accent-green);
+			}
+			.vision__item-text {
+				color: var(--text);
+			}
 		}
 
 		&-text {
 			font-size: 16px;
 			font-weight: 600;
 			line-height: 1.5;
-			color: var(--font-1);
+			color: var(--text);
 		}
 
 		&-icon {
 			min-width: 50px;
 			width: 50px;
-			// margin-left: auto;
 
 			svg {
 				width: 50px;
@@ -71,41 +81,52 @@
 	}
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 	.vision {
-		&__bg {
-			transform: translateY(-215px);
-		}
-
-		&__items {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
 		&__item {
-			&:nth-child(1) {
-				grid-column: 1 / 2;
-			}
-
-			&:nth-child(2) {
-				grid-column: 2 / 3;
-			}
+			padding: 35px;
+			row-gap: 25px;
 		}
 	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
 	.vision {
+		padding: 50px 0;
+
 		&__items {
 			grid-template-columns: 1fr;
+
+			&::before {
+				content: none;
+			}
 		}
 
 		&__item {
-			&:nth-child(1) {
-				grid-column: 1 / 2;
+			padding: 20px;
+
+			&:nth-child(odd) {
+				background-color: var(--accent-green);
+
+				.vision__item-icon svg {
+					fill: var(--white);
+				}
+
+				.vision__item-text {
+					color: var(--white);
+				}
 			}
 
-			&:nth-child(2) {
-				grid-column: 1 / 2;
+			&:nth-child(even) {
+				background-color: var(--white);
+
+				.vision__item-icon svg {
+					fill: var(--accent-green);
+				}
+
+				.vision__item-text {
+					color: var(--text);
+				}
 			}
 		}
 	}

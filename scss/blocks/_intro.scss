@@ -18,7 +18,7 @@
 		font-weight: 800;
 		font-size: 38px;
 		line-height: 1.16;
-		color: var(--font-1);
+		color: var(--text);
 	}
 
 	&__subtitle {
@@ -28,7 +28,7 @@
 		font-weight: 600;
 		font-size: 18px;
 		line-height: 1.5;
-		color: var(--font-1);
+		color: var(--text);
 	}
 
 	&__img {
@@ -36,19 +36,13 @@
 		margin-left: auto;
 		position: relative;
 
+		background-image: url('../images/intro/intro-icon-bg-green.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
 		img {
 			z-index: 1;
-		}
-
-		&::before {
-			content: url('../images/intro/intro-icon-bg.png');
-			// content: url('../images/intro/intro-icon-bg-green.png');
-			width: 500px;
-			height: 500px;
-			position: absolute;
-			top: 0;
-			left: 0;
-			transform: translate(-50%, -50%);
 		}
 	}
 
@@ -113,148 +107,57 @@
 				font-weight: 600;
 				font-size: 14px;
 				line-height: 1.2;
-				color: var(--font-2);
+				color: var(--white);
 				text-align: center;
 			}
 		}
 	}
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1169px) {
 	.intro {
-		&__title {
-			font-size: 32px;
-			max-width: 475px;
-		}
-
-		&__right {
-			&-img {
-				width: 550px;
-				transform: translate(0, 0);
-			}
-
-			.info {
-				width: 155px;
-				top: 250px;
-				right: 400px;
-
-				img {
-					width: 100px;
-				}
-			}
-
-			.info2 {
-				top: 365px;
-				right: 135px;
-
-				img {
-					width: 90px;
-				}
-			}
+		&__img {
+			max-width: 350px;
 		}
 	}
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 	.intro {
-		&__title {
-			padding-top: 50px;
-		}
-
 		&__wrapper {
+			padding: 50px 0;
 			flex-direction: column;
-		}
-
-		&__right {
-			margin: 0 auto;
-			position: relative;
-
-			.info {
-				width: 155px;
-				top: 75px;
-				left: 50%;
-				transform: translateX(-170%);
-			}
-
-			.info2 {
-				top: 350px;
-				right: auto;
-				left: 50%;
-				transform: translateX(30%);
-			}
-		}
-	}
-}
-
-@media (max-width: 576px) {
-	.intro {
-		.container {
-			padding: 0;
-		}
-
-		&__wrapper {
-			row-gap: 15px;
-		}
-
-		&__left {
-			padding: 0 15px;
+			align-items: center;
 		}
 
 		&__title {
-			padding-top: 20px;
-			max-width: 100%;
-			font-size: 22px;
+			text-align: center;
 		}
 
 		&__subtitle {
-			padding: 0;
-			margin-top: 12px;
-			font-size: 14px;
-			max-width: 100%;
+			text-align: center;
 		}
 
-		&__right {
-			&-img {
-				display: none;
-			}
+		&__img {
+			margin: 50px auto 0;
+		}
+	}
+}
 
-			&-img2 {
-				display: block;
-			}
+@media (max-width: 767px) {
+	.intro {
+		&__title {
+			font-size: 26px;
+		}
 
-			.info {
-				width: 94px;
-				padding-top: 33px;
-				top: 40px;
-				transform: translateX(-165%);
+		&__subtitle {
+			margin-top: 20px;
+			font-size: 16px;
+		}
 
-				&__title {
-					font-size: 10px;
-				}
-
-				&__text {
-					font-size: 10px;
-				}
-
-				img {
-					width: 65px;
-				}
-			}
-
-			.info2 {
-				width: 95px;
-				padding: 8px;
-				top: 197px;
-				transform: translateX(55%);
-
-				&__text {
-					font-size: 10px;
-				}
-
-				img {
-					width: 72px;
-				}
-			}
+		&__img {
+			margin: 25px auto 0;
+			max-width: 290px;
 		}
 	}
 }

@@ -13,7 +13,7 @@
 		font-weight: 600;
 		font-size: 16px;
 		line-height: 1.5;
-		color: var(--font-2);
+		color: var(--white);
 	}
 
 	&__contacts {
@@ -32,11 +32,11 @@
 		font-weight: 700;
 		font-family: 'Mulish', sans-serif;
 		line-height: 1.5;
-		color: var(--font-2);
+		color: var(--white);
 		transition: all 0.2s linear;
 
 		svg {
-			fill: var(--font-2);
+			fill: var(--white);
 			transition: all 0.2s linear;
 		}
 
@@ -71,7 +71,7 @@
 			width: 50px;
 			height: 50px;
 			border-radius: 50%;
-			background-color: var(--font-2);
+			background-color: var(--white);
 			transition: all 0.2s linear;
 
 			svg {
@@ -82,7 +82,7 @@
 			@media (hover: hover) {
 				&:hover {
 					svg {
-						fill: var(--font-2);
+						fill: var(--white);
 					}
 					background-color: var(--accent-green);
 				}
@@ -91,7 +91,7 @@
 			@media (hover: none) {
 				&:active {
 					svg {
-						fill: var(--font-2);
+						fill: var(--white);
 					}
 					background-color: var(--accent-green);
 				}

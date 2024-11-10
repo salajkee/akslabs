@@ -23,7 +23,7 @@
 			font-weight: 600;
 			font-size: 18px;
 			line-height: 1.2;
-			color: var(--font-1);
+			color: var(--text);
 			transition: 0.2s linear;
 
 			@media (hover: hover) {
@@ -37,7 +37,7 @@
 			font-weight: 800;
 			font-size: 18px;
 			line-height: 1.16;
-			color: var(--font-1);
+			color: var(--text);
 		}
 	}
 
@@ -64,7 +64,7 @@
 		span {
 			width: 19px;
 			height: 1px;
-			background: var(--font-1);
+			background: var(--text);
 			position: relative;
 			transition: all 0.3s linear;
 			border-radius: 0.5px;
@@ -77,7 +77,7 @@
 				left: 0;
 
 				border-radius: 0.5px;
-				background: var(--font-1);
+				background: var(--text);
 				transition: all 0.3s linear;
 				transform: translateY(-6px);
 			}
@@ -89,7 +89,7 @@
 				left: 0;
 
 				border-radius: 0.5px;
-				background: var(--font-1);
+				background: var(--text);
 				transition: all 0.3s linear;
 				transform: translateY(6px);
 			}
@@ -103,11 +103,11 @@
 				background: transparent;
 				&::before {
 					transform: rotate(45deg);
-					background: var(--font-1);
+					background: var(--text);
 				}
 				&::after {
 					transform: rotate(-45deg);
-					background: var(--font-1);
+					background: var(--text);
 				}
 			}
 		}
@@ -124,7 +124,7 @@
 			top: 100%;
 			right: 0;
 			padding: 15px;
-			background: var(--font-2);
+			background: var(--white);
 			z-index: 3;
 			transition: all 0.3s linear;
 			opacity: 0;

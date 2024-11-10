@@ -24,3 +24,10 @@ try {
 		});
 	});
 } catch (e) {}
+
+try {
+	const phoneInput = document.querySelector('#phone');
+	const phoneMask = new IMask(phoneInput, {
+		mask: '00 000-00-00',
+	});
+} catch (e) {}
