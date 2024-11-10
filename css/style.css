@@ -196,6 +196,8 @@ body {
 
 .header {
   padding: 20px 0 0;
+  position: relative;
+  z-index: 1;
 }
 .header__wrapper {
   display: flex;
@@ -339,6 +341,9 @@ body {
   padding: 100px 0;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.intro__left {
   position: relative;
 }
 .intro__title {

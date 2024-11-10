@@ -1,5 +1,7 @@
 .header {
 	padding: 20px 0 0;
+	position: relative;
+	z-index: 1;
 
 	&__wrapper {
 		display: flex;
